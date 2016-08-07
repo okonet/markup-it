@@ -30,3 +30,5 @@ node_modules
 # Example
 example/dist.js
 example/dist.css
+
+dist

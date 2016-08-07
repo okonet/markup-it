@@ -10,10 +10,19 @@
         } ],
         "spaced-comment": [ 2, "always" ]
     },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
     "env": {
         "node": true,
         "mocha": true,
-        "browser": false
+        "browser": false,
+        "es6": true
     },
     "globals": {
         "mock": true

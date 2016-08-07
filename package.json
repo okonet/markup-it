@@ -2,10 +2,12 @@
   "name": "markup-it",
   "version": "2.3.0",
   "description": "Pipeline for working with markup input (for example Markdown)",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "./node_modules/.bin/mocha ./testing/setup.js \"./lib/**/*/__tests__/*.js\" \"./lib/__tests__/*.js\" \"./syntaxes/**/*/__tests__/*.js\" --reporter=list --timeout=10000"
+    "dist": "babel ./lib --out-dir ./dist; babel ./syntaxes --out-dir ./dist/syntaxes",
+    "prepublish": "npm run dist",
+    "test": "./node_modules/.bin/mocha ./testing/setup.js \"./lib/**/*/__tests__/*.js\" \"./lib/__tests__/*.js\" \"./syntaxes/**/*/__tests__/*.js\" --compilers js:babel-register --reporter=list --timeout=10000"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,10 @@
   },
   "homepage": "https://github.com/GitbookIO/markup-it#readme",
   "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-2": "^6.13.0",
     "eslint": "^2.4.0",
     "mocha": "^2.4.5",
     "should": "^8.2.2",
