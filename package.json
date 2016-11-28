@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/GitbookIO/markup-it#readme",
   "devDependencies": {
-    "eslint": "^2.4.0",
-    "mocha": "^2.4.5",
+    "eslint": "^3.11.0",
+    "mocha": "^3.2.0",
     "read-metadata": "^1.0.0",
-    "should": "^8.2.2",
+    "should": "^11.1.1",
     "should-html": ">=1.0.2",
     "util": "^0.10.3"
   },
@@ -37,11 +37,11 @@
     "htmlparser2": "^3.9.0",
     "immutable": "^3.7.6",
     "is": "^3.1.0",
-    "ltrim": "0.0.3",
+    "ltrim": "1.0.0",
     "object-values": "^1.0.0",
     "range-utils": "^1.1.0",
-    "rtrim": "0.0.3",
-    "yargs": "^4.7.1"
+    "rtrim": "1.0.0",
+    "yargs": "^6.4.0"
   },
   "bin": {
     "markup-toJSON": "./bin/toJSON.js",
